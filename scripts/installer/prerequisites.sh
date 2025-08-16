@@ -81,6 +81,6 @@ run_command "mv /home/$SUDO_USER/dotfiles/.config/lsd /home/$SUDO_USER/.config/"
 run_command "mv /home/$SUDO_USER/dotfiles/.config/fastfetch /home/$SUDO_USER/.config/" "Add configuration for fastfetch" "yes" "no"
 
 run_command "pacman -S --noconfirm yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick chafa ueberzugpp resvg" "Install Yazi (CLI file manager)" "yes"
-run_command "mv /home/$SUDO_USER/dotfiles/.config/yazi /home/$SUDO_USER/.config/ && ya pkg upgrade" "Add configuration for Yazi" "yes" "no"
+run_command "mv /home/$SUDO_USER/dotfiles/.config/yazi /home/$SUDO_USER/.config/" "Add configuration for Yazi" "yes" "no"
 
 echo "------------------------------------------------------------------------"
