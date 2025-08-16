@@ -24,12 +24,12 @@ source $BASE_DIR/scripts/installer/helper.sh
 log_message "Installation started for prerequisites section"
 print_info "\nStarting prerequisites setup..."
 
-run_command "pacman -Syyu --noconfirm" "Update package database and upgrade packages (Recommended)" "yes"
-
 sudo echo '[archlinuxcn]' >> /etc/pacman.conf
 sudo echo 'Server = https://repo.archlinuxcn.org/$arch' >> /etc/pacman.conf
-run_command "pacman -Syy --noconfirm" "Refresh package databases from the server" "yes"
+run_command "pacman -Sy --noconfirm" "Refresh package databases from the server" "yes"
 run_command "pacman -S --noconfirm archlinuxcn-keyring" "Install Arch Linux CN PGP keyring" "yes"
+
+run_command "pacman -Syyu --noconfirm" "Update package database and upgrade packages (Recommended)" "yes"
 
 if command -v paru > /dev/null; then
     print_info "Skipping paru installation (already installed)."
