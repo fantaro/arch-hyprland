@@ -38,7 +38,7 @@ elif run_command "pacman -S --noconfirm --needed git base-devel" "Install paru (
     run_command "makepkg --noconfirm -si && cd .. # builds with makepkg" "Build paru (Must)/Breaks the script" "no" "no"
 fi
 
-run_command "git clone https://github.com/fantaro/dotfiles /home/$SUDO_USER/" "Get dotfiles" "no" "no"
+run_command "git clone https://github.com/fantaro/dotfiles /home/$SUDO_USER/dotfiles" "Get dotfiles" "no" "no"
 
 run_command "pacman -S --noconfirm pipewire wireplumber pamixer brightnessctl" "Configuring audio and brightness (Recommended)" "yes"
 
