@@ -28,8 +28,8 @@ run_command "pacman -S --noconfirm nwg-look" "Install nwg-look for GTK theme man
 
 run_command "pacman -S --noconfirm qt5ct qt6ct kvantum" "Install Qt5, Qt6 Settings, and Kvantum theme engines" "yes"
 
-run_command "paru -S --sudoloop --noconfirm colloid-catppuccin-gtk-theme-git" "Install Catppuccin GTK theme" "yes" "no"
-run_command "paru -S --sudoloop --noconfirm colloid-gruvbox-gtk-theme-git" "Install Gruvbox GTK theme" "yes" "no"
+run_command "tar -xvf $BASE_DIR/assets/themes/Catppuccin-Dark.tar.xz -C /usr/share/themes/" "Install Catppuccin Dark GTK theme" "yes"
+run_command "tar -xvf $BASE_DIR/assets/themes/Gruvbox-Dark.tar.xz -C /usr/share/themes/" "Install Gruvbox Dark GTK theme" "yes"
 
 run_command "tar -xvf $BASE_DIR/assets/icons/Gruvbox-Plus-Dark.tar.xz -C /usr/share/icons/" "Install Gruvbox icon theme" "yes"
 run_command "tar -xvf $BASE_DIR/assets/icons/Moga-White.tar.xz -C /usr/share/icons/" "Install Moga-White cursor theme" "yes"
