@@ -32,12 +32,12 @@ run_command "cp -r $BASE_DIR/configs/tofi /home/$SUDO_USER/.config/" "Copy Tofi 
 
 run_command "pacman -S --noconfirm cliphist" "Install Cliphist - Clipboard Manager" "yes"
 
-run_command "pacman -S --sudoloop --noconfirm swww" "Install SWWW for wallpaper management" "yes"
+run_command "pacman -S --noconfirm swww" "Install SWWW for wallpaper management" "yes"
 run_command "mkdir -p /home/$SUDO_USER/.config/assets/backgrounds && cp -r $BASE_DIR/assets/backgrounds /home/$SUDO_USER/.config/assets/" "Copy sample wallpapers to assets directory (Recommended)" "yes" "no"
 
-run_command "pacman -S --sudoloop --noconfirm hyprpicker" "Install Hyprpicker - Color Picker" "yes"
+run_command "pacman -S --noconfirm hyprpicker" "Install Hyprpicker - Color Picker" "yes"
 
-run_command "pacman -S --sudoloop --noconfirm hyprlock" "Install Hyprlock - Screen Locker (Must)" "yes"
+run_command "pacman -S --noconfirm hyprlock" "Install Hyprlock - Screen Locker (Must)" "yes"
 run_command "cp -r $BASE_DIR/configs/hypr/hyprlock.conf /home/$SUDO_USER/.config/hypr/" "Copy Hyprlock config" "yes" "no"
 
 run_command "paru -S --sudoloop --noconfirm wlogout" "Install Wlogout - Session Manager" "yes" "no"
@@ -45,7 +45,7 @@ run_command "cp -r $BASE_DIR/configs/wlogout /home/$SUDO_USER/.config/ && cp -r 
 
 run_command "paru -S --sudoloop --noconfirm grimblast" "Install Grimblast - Screenshot tool" "yes" "no"
 
-run_command "pacman -S --sudoloop --noconfirm hypridle" "Install Hypridle for idle management (Must)" "yes"
+run_command "pacman -S --noconfirm hypridle" "Install Hypridle for idle management (Must)" "yes"
 run_command "cp -r $BASE_DIR/configs/hypr/hypridle.conf /home/$SUDO_USER/.config/hypr/" "Copy Hypridle config" "yes" "no"
 
 echo "------------------------------------------------------------------------"

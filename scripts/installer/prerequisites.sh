@@ -38,7 +38,7 @@ elif run_command "pacman -S --noconfirm --needed git base-devel" "Install paru (
     run_command "makepkg --noconfirm -si && cd .. # builds with makepkg" "Build paru (Must)/Breaks the script" "no" "no"
 fi
 
-run_command "git clone https://github.com/fantaro/dotfiles /home/$SUDO_USER/Documents" "Get dotfiles" "no" "no"
+run_command "git clone https://github.com/fantaro/dotfiles /home/$SUDO_USER/" "Get dotfiles" "no" "no"
 
 run_command "pacman -S --noconfirm pipewire wireplumber pamixer brightnessctl" "Configuring audio and brightness (Recommended)" "yes"
 
@@ -59,28 +59,28 @@ run_command "paru -S --sudoloop --noconfirm microsoft-edge-stable-bin" "Install 
 run_command "paru -S --sudoloop --noconfirm visual-studio-code-bin" "Install VScode" "yes" "no"
 
 run_command "pacman -S --noconfirm kitty ghostty" "Install terminal tools" "yes"
-run_command "mv /home/$SUDO_USER/Documents/dotfiles/.config/kitty /home/$SUDO_USER/.config/" "Add configuration for Kitty terminal" "yes" "no"
-run_command "mv /home/$SUDO_USER/Documents/dotfiles/.config/ghostty /home/$SUDO_USER/.config/" "Add configuration for Ghostty terminal" "yes" "no"
+run_command "mv /home/$SUDO_USER/dotfiles/.config/kitty /home/$SUDO_USER/.config/" "Add configuration for Kitty terminal" "yes" "no"
+run_command "mv /home/$SUDO_USER/dotfiles/.config/ghostty /home/$SUDO_USER/.config/" "Add configuration for Ghostty terminal" "yes" "no"
 
 run_command "pacman -S --noconfirm neovim" "Install Vim (Neovim) editor" "yes"
 
 if run_command "git clone https://github.com/LazyVim/starter /home/$SUDO_USER/.config/nvim && rm -rf /home/$SUDO_USER/.config/nvim/.git" "Install LazyVim for neovim" "yes" "no"; then
-    run_command "mv /home/$SUDO_USER/Documents/dotfiles/.config/nvim/lua/config/keymaps.lua /home/$SUDO_USER/.config/nvim/lua/config/keymaps.lua" "Add key maps configuration for neovim" "no" "no"
-    run_command "mv /home/$SUDO_USER/Documents/dotfiles/.config/nvim/lua/config/options.lua /home/$SUDO_USER/.config/nvim/lua/config/options.lua" "Add options configuration for neovim" "no" "no"
+    run_command "mv /home/$SUDO_USER/dotfiles/.config/nvim/lua/config/keymaps.lua /home/$SUDO_USER/.config/nvim/lua/config/keymaps.lua" "Add key maps configuration for neovim" "no" "no"
+    run_command "mv /home/$SUDO_USER/dotfiles/.config/nvim/lua/config/options.lua /home/$SUDO_USER/.config/nvim/lua/config/options.lua" "Add options configuration for neovim" "no" "no"
 fi
 
 if run_command "pacman -S --noconfirm neovide" "Install Neovide (GUI client for Neovim)" "yes"; then
-    run_command "mv /home/$SUDO_USER/Documents/dotfiles/.config/neovide /home/$SUDO_USER/.config/" "Add configuration for Neovide" "yes" "no"
+    run_command "mv /home/$SUDO_USER/dotfiles/.config/neovide /home/$SUDO_USER/.config/" "Add configuration for Neovide" "yes" "no"
 fi
 
 run_command "pacman -S --noconfirm tar man-db gcc make bat lsd lazygit curl wget wl-clipboard xclip xsel fuse2 fastfetch ncdu btop tmux yt-dlp aria2" "Install basic CLI tools" "yes"
-run_command "mv /home/$SUDO_USER/Documents/dotfiles/.tmux.conf /home/$SUDO_USER/" "Add configuration for tmux" "yes" "no"
-run_command "mv /home/$SUDO_USER/Documents/dotfiles/.aria2 /home/$SUDO_USER/" "Add configuration for aria2" "yes" "no"
-run_command "mv /home/$SUDO_USER/Documents/dotfiles/.config/btop /home/$SUDO_USER/.config/" "Add configuration for btop" "yes" "no"
-run_command "mv /home/$SUDO_USER/Documents/dotfiles/.config/lsd /home/$SUDO_USER/.config/" "Add configuration for lsd" "yes" "no"
-run_command "mv /home/$SUDO_USER/Documents/dotfiles/.config/fastfetch /home/$SUDO_USER/.config/" "Add configuration for fastfetch" "yes" "no"
+run_command "mv /home/$SUDO_USER/dotfiles/.tmux.conf /home/$SUDO_USER/" "Add configuration for tmux" "yes" "no"
+run_command "mv /home/$SUDO_USER/dotfiles/.aria2 /home/$SUDO_USER/" "Add configuration for aria2" "yes" "no"
+run_command "mv /home/$SUDO_USER/dotfiles/.config/btop /home/$SUDO_USER/.config/" "Add configuration for btop" "yes" "no"
+run_command "mv /home/$SUDO_USER/dotfiles/.config/lsd /home/$SUDO_USER/.config/" "Add configuration for lsd" "yes" "no"
+run_command "mv /home/$SUDO_USER/dotfiles/.config/fastfetch /home/$SUDO_USER/.config/" "Add configuration for fastfetch" "yes" "no"
 
 run_command "pacman -S --noconfirm yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick chafa ueberzugpp resvg" "Install Yazi (CLI file manager)" "yes"
-run_command "mv /home/$SUDO_USER/Documents/dotfiles/.config/yazi /home/$SUDO_USER/.config/ && ya pkg upgrade" "Add configuration for Yazi" "yes" "no"
+run_command "mv /home/$SUDO_USER/dotfiles/.config/yazi /home/$SUDO_USER/.config/ && ya pkg upgrade" "Add configuration for Yazi" "yes" "no"
 
 echo "------------------------------------------------------------------------"
