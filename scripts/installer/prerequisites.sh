@@ -52,7 +52,7 @@ run_command "pacman -S --noconfirm fcitx5 fcitx5-mozc fcitx5-configtool fcitx5-g
 
 run_command "pacman -S --noconfirm sddm && systemctl enable sddm.service" "Install and enable SDDM (Recommended)" "yes"
 
-run_command "pacman -S --noconfirm dolphin mousepad" "Install file manager and simple text editor" "yes"
+run_command "pacman -S --noconfirm nemo mousepad" "Install file manager and simple text editor" "yes"
 
 run_command "paru -S --sudoloop --noconfirm microsoft-edge-stable-bin" "Install MS edge browser" "yes" "no"
 
