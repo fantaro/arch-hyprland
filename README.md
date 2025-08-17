@@ -29,18 +29,20 @@ Arch linux 的衍生发行版（如：Manjaro）能否正常运行还有待测�
 ### 默认键位绑定 ⌨️
 
 #### 常规
-- `Super + Enter`: Open the Kitty terminal.
-- `Super + T`: Open the Ghostty terminal.
-- `Super + B`: Open the browser.
-- `Super + C`: Open the primary editor.
-- `Super + S`: Open the alternative editor.
-- `Super + E`: Open the file manager.
+- `Super + Enter`: Open the primary terminal ([Kitty](https://sw.kovidgoyal.net/kitty/)).
+- `Super + T`: Open the alternative terminal ([Ghostty](https://ghostty.org/)).
+- `Super + B`: Open the browser ([Microsoft Edge](https://www.microsoft.com/en-us/edge)).
+- `Super + C`: Open the primary editor ([Neovim](https://neovim.io/)).
+- `Super + S`: Open the alternative editor ([Mousepad](https://docs.xfce.org/apps/mousepad/start)).
+- `Super + E`: Open the primary file manager ([Nemo](https://github.com/linuxmint/nemo)).
+- `Super + SHIFT + E`: Open the alternative file manager ([Yazi](https://yazi-rs.github.io/)).
 - `Super + D`: Open the application menu.
 - `Super + M`: Exit Hyprland.
 - `Super + V`: Open the clipboard history and paste the selected item.
 - `Super + P`: Open the color picker and copy the selected color to the clipboard.
 - `Super + ALT + E`: Open the Emoji picker and copy the selected emoji to the clipboard.
 - `Super + L`: Lock the screen.
+- `Super + Z`: Toggle zooming.
 - `Super + Escape`: Open the logout menu.
 
 #### 窗口和工作区
