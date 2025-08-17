@@ -32,7 +32,6 @@ Arch linux 的衍生发行版（如：Manjaro）能否正常运行还有待测�
 - `Super + Enter`: Open the Kitty terminal.
 - `Super + T`: Open the Ghostty terminal.
 - `Super + B`: Open the browser.
-- `Super + O`: Open notes application.
 - `Super + C`: Open the primary editor.
 - `Super + S`: Open the alternative editor.
 - `Super + E`: Open the file manager.
@@ -40,6 +39,7 @@ Arch linux 的衍生发行版（如：Manjaro）能否正常运行还有待测�
 - `Super + M`: Exit Hyprland.
 - `Super + V`: Open the clipboard history and paste the selected item.
 - `Super + P`: Open the color picker and copy the selected color to the clipboard.
+- `Super + ALT + E`: Open the Emoji picker and copy the selected emoji to the clipboard.
 - `Super + L`: Lock the screen.
 - `Super + Escape`: Open the logout menu.
 
