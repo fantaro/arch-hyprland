@@ -44,10 +44,11 @@ Arch linux 的衍生发行版（如：Manjaro）能否正常运行还有待测�
 - `Super + L`: Lock the screen.
 - `Super + Z`: Toggle zooming.
 - `Super + Escape`: Open the logout menu.
+- `Super + W`: Randomly change wallpaper.
 
 #### 窗口和工作区
 - `Super + Q`: Close the active window.
-- `Super + W`: Toggle floating mode for the active window.
+- `Super + F`: Toggle floating mode for the active window.
 - `Super + SHIFT + F`: Whole full screen.
 - `Super + CTRL + F`: Fake full screen.
 - `Super + J`: Toggle split mode in the Dwindle layout.
