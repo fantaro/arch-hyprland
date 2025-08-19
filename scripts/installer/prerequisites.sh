@@ -75,6 +75,7 @@ if run_command "git clone https://github.com/fantaro/dotfiles /home/$SUDO_USER/d
     run_command "mv /home/$SUDO_USER/dotfiles/.config/nvim/lua/config/options.lua /home/$SUDO_USER/.config/nvim/lua/config/options.lua" "Options configuration for neovim" "no" "no"
     run_command "mv /home/$SUDO_USER/dotfiles/.config/neovide /home/$SUDO_USER/.config/" "Configuration for Neovide" "no" "no"
     run_command "mv /home/$SUDO_USER/dotfiles/.tmux.conf /home/$SUDO_USER/" "Configuration for tmux" "no" "no"
+    run_command "mv /home/$SUDO_USER/dotfiles/.config/tmux /home/$SUDO_USER/.config/" "Plugins for tmux" "no" "no"
     run_command "mv /home/$SUDO_USER/dotfiles/.aria2 /home/$SUDO_USER/" "Configuration for aria2" "no" "no"
     run_command "mv /home/$SUDO_USER/dotfiles/.config/btop /home/$SUDO_USER/.config/" "Configuration for btop" "no" "no"
     run_command "mv /home/$SUDO_USER/dotfiles/.config/lsd /home/$SUDO_USER/.config/" "Configuration for lsd" "no" "no"
