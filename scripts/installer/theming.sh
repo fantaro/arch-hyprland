@@ -24,6 +24,17 @@ source $BASE_DIR/scripts/installer/helper.sh
 log_message "Installation started for theming section"
 print_info "\nStarting theming setup..."
 
+if run_command "wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh && sh install.sh" "Install Oh my Zsh" "yes"; then
+    run_command "git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" "Import zsh-autosuggestions" "no" "no"
+    run_command "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting" "Import zsh-syntax-highlighting" "no" "no"
+    run_command "mv /home/$SUDO_USER/dotfiles/.zshrc /home/$SUDO_USER/" "Configuration for zsh" "no" "no"
+fi
+
+if run_command "git clone https://gitlab.com/phoneybadger/pokemon-colorscripts.git && cd pokemon-colorscripts" "Get Pokemon colorscripts" "yes"; then
+    run_command "./install.sh" "Install Pokemon colorscripts" "no" "yes"
+    run_command "cd .. && rm -rf pokemon-colorscripts" "Remove Pokemon colorscripts installer" "no" "no"
+fi
+
 run_command "pacman -S --noconfirm nwg-look" "Install nwg-look for GTK theme management" "yes"
 
 run_command "pacman -S --noconfirm qt5ct qt6ct kvantum" "Install Qt5, Qt6 Settings, and Kvantum theme engines" "yes"
