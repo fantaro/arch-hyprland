@@ -64,7 +64,7 @@ run_command "git clone https://github.com/LazyVim/starter /home/$SUDO_USER/.conf
 
 run_command "pacman -S --noconfirm neovide" "Install GUI client for Neovim (Neovide)" "yes"
 
-run_command "pacman -S --noconfirm tar man-db gcc make bat lsd lazygit curl wget wl-clipboard xclip xsel fuse2 fastfetch ncdu btop tmux yt-dlp aria2" "Install basic CLI tools" "yes"
+run_command "pacman -S --noconfirm tar man-db gcc make bat lsd lazygit curl wget wl-clipboard xclip xsel fuse2 fastfetch ncdu btop tmux yt-dlp aria2 zsh" "Install basic CLI tools" "yes"
 
 run_command "pacman -S --noconfirm yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick chafa ueberzugpp resvg" "Install CLI file manager (Yazi)" "yes"
 
