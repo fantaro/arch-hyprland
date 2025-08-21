@@ -45,6 +45,8 @@ run_command "cp -r $BASE_DIR/configs/wlogout /home/$SUDO_USER/.config/" "Copy Wl
 
 run_command "paru -S --sudoloop --noconfirm grimblast" "Install Grimblast (Screenshot tool)" "yes" "no"
 
+run_command "paru -S --sudoloop --noconfirm jome" "Install Jome (Emoji picker tool)" "yes" "no"
+
 run_command "pacman -S --noconfirm hypridle" "Install Hypridle for idle management (Must)" "yes"
 run_command "cp -r $BASE_DIR/configs/hypr/hypridle.conf /home/$SUDO_USER/.config/hypr/" "Copy Hypridle config" "yes" "no"
 
