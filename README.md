@@ -42,7 +42,7 @@ Arch linux 的衍生发行版（如：Manjaro）能否正常运行还有待测�
 - `Super + P`: Open the color picker and copy the selected color to the clipboard.
 - `Super + ALT + E`: Open the Emoji picker and copy the selected emoji to the clipboard.
 - `Super + L`: Lock the screen.
-- `Super + Z`: Toggle zooming.
+- `Super + ALT + [Mouse scroll]`: Desktop zooming.
 - `Super + Escape`: Open the logout menu.
 - `Super + W`: Randomly change wallpaper.
 
