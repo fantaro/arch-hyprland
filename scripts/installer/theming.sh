@@ -39,10 +39,21 @@ run_command "pacman -S --noconfirm nwg-look" "Install nwg-look for GTK theme man
 
 run_command "pacman -S --noconfirm qt5ct qt6ct kvantum" "Install Qt5, Qt6 Settings, and Kvantum theme engines" "yes"
 
-run_command "tar -xvf $BASE_DIR/assets/themes/Catppuccin-Dark.tar.xz -C /usr/share/themes/" "Install Catppuccin Dark GTK theme" "yes"
-run_command "tar -xvf $BASE_DIR/assets/themes/Gruvbox-Dark.tar.xz -C /usr/share/themes/" "Install Gruvbox Dark GTK theme" "yes"
+if run_command "cd ~ && git clone https://github.com/Fausto-Korpsvart/Everforest-GTK-Theme && cd Everforest-GTK-Theme/themes && " "Get Everforest GTK theme" "yes" "no"; then
+    run_command "./install.sh" "Install Everforest GTK theme" "no" "no"
+    run_command "mkdir -p /home/$SUDO_USER/.icons && cp -r /home/$SUDO_USER/Everforest-GTK-Theme/icons/Everforest-Dark /home/$SUDO_USER/.icons/" "Copy Everforest icons" "no" "no"
+fi
 
-run_command "tar -xvf $BASE_DIR/assets/icons/Gruvbox-Plus-Dark.tar.xz -C /usr/share/icons/" "Install Gruvbox icon theme" "yes"
+if run_command "cd ~ && git clone https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme && cd Catppuccin-GTK-Theme/themes && " "Get Catppuccin GTK theme" "yes" "no"; then
+    run_command "./install.sh" "Install Catppuccin GTK theme" "no" "no"
+    run_command "mkdir -p /home/$SUDO_USER/.icons && cp -r /home/$SUDO_USER/Catppuccin-GTK-Theme/icons/Catppuccin-Macchiato /home/$SUDO_USER/.icons/" "Copy Catppuccin icons" "no" "no"
+fi
+
+if run_command "cd ~ && git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme && cd Gruvbox-GTK-Theme/themes && " "Get Gruvbox GTK theme" "yes" "no"; then
+    run_command "./install.sh" "Install Gruvbox GTK theme" "no" "no"
+    run_command "mkdir -p /home/$SUDO_USER/.icons && cp -r /home/$SUDO_USER/Gruvbox-GTK-Theme/icons/Gruvbox-Dark /home/$SUDO_USER/.icons/" "Copy Gruvbox icons" "no" "no"
+fi
+
 run_command "tar -xvf $BASE_DIR/assets/icons/Moga-White.tar.xz -C /usr/share/icons/" "Install Moga-White cursor theme" "yes"
 
 run_command "paru -S --sudoloop --noconfirm kvantum-theme-catppuccin-git" "Install Catppuccin theme for Kvantum" "yes" "no"
