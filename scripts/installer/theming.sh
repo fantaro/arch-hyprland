@@ -30,28 +30,27 @@ if run_command "wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/to
     run_command "mv /home/$SUDO_USER/dotfiles/.zshrc /home/$SUDO_USER/" "Configuration for zsh" "no" "no"
 fi
 
-if run_command "git clone https://gitlab.com/phoneybadger/pokemon-colorscripts.git && cd pokemon-colorscripts" "Get Pokemon colorscripts" "yes" "no"; then
+if run_command "git clone https://gitlab.com/phoneybadger/pokemon-colorscripts.git $BASE_DIR/pokemon-colorscripts && cd $BASE_DIR/pokemon-colorscripts" "Get Pokemon colorscripts" "yes" "no"; then
     run_command "./install.sh" "Install Pokemon colorscripts" "no"
-    run_command "cd .. && rm -rf pokemon-colorscripts" "Remove Pokemon colorscripts installer" "no" "no"
 fi
 
 run_command "pacman -S --noconfirm nwg-look" "Install nwg-look for GTK theme management" "yes"
 
 run_command "pacman -S --noconfirm qt5ct qt6ct kvantum" "Install Qt5, Qt6 Settings, and Kvantum theme engines" "yes"
 
-if run_command "cd ~ && git clone https://github.com/Fausto-Korpsvart/Everforest-GTK-Theme && cd Everforest-GTK-Theme/themes && " "Get Everforest GTK theme" "yes" "no"; then
+if run_command "git clone https://github.com/Fausto-Korpsvart/Everforest-GTK-Theme $BASE_DIR/Everforest-GTK-Theme && cd $BASE_DIR/Everforest-GTK-Theme/themes" "Get Everforest GTK theme" "yes" "no"; then
     run_command "./install.sh" "Install Everforest GTK theme" "no" "no"
-    run_command "mkdir -p /home/$SUDO_USER/.icons && cp -r /home/$SUDO_USER/Everforest-GTK-Theme/icons/Everforest-Dark /home/$SUDO_USER/.icons/" "Copy Everforest icons" "no" "no"
+    run_command "mkdir -p /home/$SUDO_USER/.icons && cp -r $BASE_DIR/Everforest-GTK-Theme/icons/Everforest-Dark /home/$SUDO_USER/.icons/" "Copy Everforest icons" "no" "no"
 fi
 
-if run_command "cd ~ && git clone https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme && cd Catppuccin-GTK-Theme/themes && " "Get Catppuccin GTK theme" "yes" "no"; then
+if run_command "git clone https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme $BASE_DIR/Catppuccin-GTK-Theme && cd $BASE_DIR/Catppuccin-GTK-Theme/themes" "Get Catppuccin GTK theme" "yes" "no"; then
     run_command "./install.sh" "Install Catppuccin GTK theme" "no" "no"
-    run_command "mkdir -p /home/$SUDO_USER/.icons && cp -r /home/$SUDO_USER/Catppuccin-GTK-Theme/icons/Catppuccin-Macchiato /home/$SUDO_USER/.icons/" "Copy Catppuccin icons" "no" "no"
+    run_command "mkdir -p /home/$SUDO_USER/.icons && cp -r $BASE_DIR/Catppuccin-GTK-Theme/icons/Catppuccin-Macchiato /home/$SUDO_USER/.icons/" "Copy Catppuccin icons" "no" "no"
 fi
 
-if run_command "cd ~ && git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme && cd Gruvbox-GTK-Theme/themes && " "Get Gruvbox GTK theme" "yes" "no"; then
+if run_command "git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme $BASE_DIR/Gruvbox-GTK-Theme && cd $BASE_DIR/Gruvbox-GTK-Theme/themes" "Get Gruvbox GTK theme" "yes" "no"; then
     run_command "./install.sh" "Install Gruvbox GTK theme" "no" "no"
-    run_command "mkdir -p /home/$SUDO_USER/.icons && cp -r /home/$SUDO_USER/Gruvbox-GTK-Theme/icons/Gruvbox-Dark /home/$SUDO_USER/.icons/" "Copy Gruvbox icons" "no" "no"
+    run_command "mkdir -p /home/$SUDO_USER/.icons && cp -r $BASE_DIR/Gruvbox-GTK-Theme/icons/Gruvbox-Dark /home/$SUDO_USER/.icons/" "Copy Gruvbox icons" "no" "no"
 fi
 
 run_command "tar -xvf $BASE_DIR/assets/icons/Moga-White.tar.xz -C /usr/share/icons/" "Install Moga-White cursor theme" "yes"
