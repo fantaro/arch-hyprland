@@ -75,6 +75,16 @@ Arch linux 的衍生发行版（如：Manjaro）能否正常运行还有待测�
 - `Super + Print Screen`: Take a screenshot of the active window and copy it to the clipboard.
 - `Super + Alt + Print Screen`: Select an area to take a screenshot and copy it to the clipboard.
 
+### 预装主题 🎨
+
+#### 鼠标指针
+- [Moga-White](https://store.kde.org/p/2297654)
+
+#### 皮肤图标套装
+- [Everforest](https://github.com/Fausto-Korpsvart/Everforest-GTK-Theme)
+- [Catppuccin](https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme)
+- [Gruvbox](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme)
+
 ## Hyprland 官网 📖
 * [Hyprland](https://github.com/hyprwm/Hyprland)
 * [Hyprland Wiki](https://wiki.hyprland.org)
