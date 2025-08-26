@@ -33,7 +33,7 @@ Arch linux 的衍生发行版（如：Manjaro）能否正常运行还有待测�
 - `Super + T`: Open the alternative terminal ([Ghostty](https://ghostty.org/)).
 - `Super + B`: Open the browser ([Microsoft Edge](https://www.microsoft.com/en-us/edge)).
 - `Super + C`: Open the primary editor ([Neovim](https://neovim.io/)).
-- `Super + S`: Open the alternative editor ([Mousepad](https://docs.xfce.org/apps/mousepad/start)).
+- `Super + SHIFT + C`: Open the alternative editor ([Mousepad](https://docs.xfce.org/apps/mousepad/start)).
 - `Super + E`: Open the primary file manager ([Nemo](https://github.com/linuxmint/nemo)).
 - `Super + SHIFT + E`: Open the alternative file manager ([Yazi](https://yazi-rs.github.io/)).
 - `Super + D`: Open the application menu.
