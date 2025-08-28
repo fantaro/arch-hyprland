@@ -81,6 +81,7 @@ if run_command "git clone https://github.com/fantaro/dotfiles /home/$SUDO_USER/d
     run_command "mv /home/$SUDO_USER/dotfiles/.config/lsd /home/$SUDO_USER/.config/" "Configuration for lsd" "no" "no"
     run_command "mv /home/$SUDO_USER/dotfiles/.config/fastfetch /home/$SUDO_USER/.config/" "Configuration for fastfetch" "no" "no"
     run_command "mv /home/$SUDO_USER/dotfiles/.config/yazi /home/$SUDO_USER/.config/" "Configuration and plugins for Yazi" "no" "no"
+    run_command "mv /home/$SUDO_USER/dotfiles/.config/environment.d /home/$SUDO_USER/.config/" "Definition of user service environment" "no" "no"
 fi
 
 echo "------------------------------------------------------------------------"
