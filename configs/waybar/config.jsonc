@@ -25,12 +25,20 @@
     "hyprland/window": {
         "format": "󰣇 {}"
     },
-    
+
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "on-click": "activate"
-        //"format": "{icon}",
+        "on-click": "activate",
+        "persistent-workspaces": {
+          "*": 5
+	    },
+	    "format": "{icon}",
+	    "format-icons": {
+			"active": "<span font='12'>󰮯</span>",
+			"empty": "<span font='8'></span>",
+			"default": "<span font='8'></span>",
+	    }
     },
 
     "tray": {
@@ -39,8 +47,8 @@
     },
 
     "clock": {
-        // "format": "{:%A    %B-%d-%Y    %I:%M %p}", // AM PM format
-        "format": "{:%A    %B-%d-%Y    %H:%M}", // 24H
+        // "format": "{:%A    %Y-%m-%d    %I:%M %p}", // AM PM format
+        "format": "{:%A    %Y-%m-%d    %H:%M}", // 24H
         "interval": 1,
         "rotate": 0,
         "tooltip-format": "<tt>{calendar}</tt>",
