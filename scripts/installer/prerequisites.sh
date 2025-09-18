@@ -56,7 +56,9 @@ run_command "paru -S --sudoloop --noconfirm microsoft-edge-stable-bin" "Install 
 
 run_command "paru -S --sudoloop --noconfirm visual-studio-code-bin" "Install visual studio code" "yes" "no"
 
-run_command "pacman -S --noconfirm kitty ghostty" "Install terminal tools (Kitty and Ghostty)" "yes"
+run_command "pacman -S --noconfirm kitty" "Install terminal tools (Kitty)" "yes"
+
+run_command "pacman -S --noconfirm ghostty" "Install terminal tools (Ghostty)" "yes"
 
 run_command "pacman -S --noconfirm neovim" "Install Vim (Neovim) editor" "yes"
 
