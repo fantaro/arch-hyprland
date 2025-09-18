@@ -30,7 +30,7 @@ Arch linux 的衍生发行版（如：Manjaro）能否正常运行还有待测�
 
 #### 常规
 - `Super + Enter`: Open the primary terminal ([Kitty](https://sw.kovidgoyal.net/kitty/)).
-- `Super + T`: Open the alternative terminal ([Ghostty](https://ghostty.org/)).
+- `Super + T`: Open the alternative terminal ([Alacritty](https://alacritty.org/)).
 - `Super + B`: Open the browser ([Microsoft Edge](https://www.microsoft.com/en-us/edge)).
 - `Super + C`: Open the primary editor ([Neovim](https://neovim.io/)).
 - `Super + SHIFT + C`: Open the alternative editor ([Mousepad](https://docs.xfce.org/apps/mousepad/start)).

@@ -58,7 +58,7 @@ run_command "paru -S --sudoloop --noconfirm visual-studio-code-bin" "Install vis
 
 run_command "pacman -S --noconfirm kitty" "Install terminal tools (Kitty)" "yes"
 
-run_command "pacman -S --noconfirm ghostty" "Install terminal tools (Ghostty)" "yes"
+run_command "pacman -S --noconfirm alacritty" "Install terminal tools (Alacritty)" "yes"
 
 run_command "pacman -S --noconfirm neovim" "Install Vim (Neovim) editor" "yes"
 
@@ -72,7 +72,7 @@ run_command "pacman -S --noconfirm yazi ffmpeg 7zip jq poppler fd ripgrep fzf zo
 
 if run_command "git clone https://github.com/fantaro/dotfiles /home/$SUDO_USER/dotfiles" "Get dotfiles (https://github.com/fantaro/dotfiles)" "yes" "no"; then
     run_command "mv /home/$SUDO_USER/dotfiles/.config/kitty /home/$SUDO_USER/.config/" "Configuration for Kitty terminal" "no" "no"
-    run_command "mv /home/$SUDO_USER/dotfiles/.config/ghostty /home/$SUDO_USER/.config/" "Configuration for Ghostty terminal" "no" "no"
+    run_command "mv /home/$SUDO_USER/dotfiles/.config/alacritty /home/$SUDO_USER/.config/" "Configuration for Alacritty terminal" "no" "no"
     run_command "mv /home/$SUDO_USER/dotfiles/.config/nvim/lua/config/keymaps.lua /home/$SUDO_USER/.config/nvim/lua/config/keymaps.lua" "Key maps configuration for neovim" "no" "no"
     run_command "mv /home/$SUDO_USER/dotfiles/.config/nvim/lua/config/options.lua /home/$SUDO_USER/.config/nvim/lua/config/options.lua" "Options configuration for neovim" "no" "no"
     run_command "mv /home/$SUDO_USER/dotfiles/.config/neovide /home/$SUDO_USER/.config/" "Configuration for Neovide" "no" "no"
