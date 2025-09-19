@@ -38,29 +38,21 @@ elif run_command "pacman -S --noconfirm --needed git base-devel" "Install paru (
     run_command "makepkg --noconfirm -si && cd .. # builds with makepkg" "Build paru (Must)/Breaks the script" "no" "no"
 fi
 
-run_command "pacman -S --noconfirm pipewire wireplumber pamixer brightnessctl" "Configuring audio and brightness (Recommended)" "yes"
+run_command "pacman -S --noconfirm pipewire wireplumber pamixer brightnessctl" "Configuring audio and brightness" "yes"
 
-run_command "pacman -S --noconfirm ttf-jetbrains-mono-nerd ttf-jetbrains-mono ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra" "Installing recommended fonts" "yes"
+run_command "pacman -S --noconfirm ttf-jetbrains-mono-nerd ttf-jetbrains-mono ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra" "Installing basic fonts" "yes"
 
 run_command "pacman -S --noconfirm ttf-cascadia-code-nerd ttf-cascadia-mono-nerd ttf-fira-code ttf-fira-mono ttf-fira-sans ttf-firacode-nerd ttf-iosevka-nerd ttf-iosevkaterm-nerd ttf-maplemono-nf-cn-unhinted" "Installing additional fonts" "yes"
 
-run_command "pacman -S --noconfirm bluez bluez-utils blueman && systemctl enable bluetooth.service" "Installing and enable bluetooth (Recommended)" "yes"
+run_command "pacman -S --noconfirm bluez bluez-utils blueman && systemctl enable bluetooth.service" "Installing and enable bluetooth" "yes"
 
-run_command "pacman -S --noconfirm sddm && systemctl enable sddm.service" "Install and enable SDDM (Recommended)" "yes"
+run_command "pacman -S --noconfirm sddm && systemctl enable sddm.service" "Install and enable SDDM" "yes"
 
 run_command "pacman -S --noconfirm fcitx5 fcitx5-mozc fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-chinese-addons fcitx5-pinyin-zhwiki" "Installing input method (Fcitx5)" "yes"
 
-run_command "pacman -S --noconfirm nemo mousepad" "Install GUI file manager (nemo) and simple text editor (mousepad)" "yes"
+run_command "pacman -S --noconfirm kitty alacritty" "Install terminal emulator (Kitty and Alacritty)" "yes"
 
-run_command "paru -S --sudoloop --noconfirm microsoft-edge-stable-bin" "Install Microsoft edge browser" "yes" "no"
-
-run_command "paru -S --sudoloop --noconfirm visual-studio-code-bin" "Install visual studio code" "yes" "no"
-
-run_command "pacman -S --noconfirm kitty" "Install terminal tools (Kitty)" "yes"
-
-run_command "pacman -S --noconfirm alacritty" "Install terminal tools (Alacritty)" "yes"
-
-run_command "pacman -S --noconfirm neovim" "Install Vim (Neovim) editor" "yes"
+run_command "pacman -S --noconfirm neovim" "Install Vim editor (Neovim)" "yes"
 
 run_command "git clone https://github.com/LazyVim/starter /home/$SUDO_USER/.config/nvim && rm -rf /home/$SUDO_USER/.config/nvim/.git" "Install LazyVim" "yes" "no"
 
@@ -69,6 +61,14 @@ run_command "pacman -S --noconfirm neovide" "Install GUI client for Neovim (Neov
 run_command "pacman -S --noconfirm tar man-db gcc make bat lsd lazygit curl wget wl-clipboard xclip xsel fuse2 fastfetch ncdu btop zellij yt-dlp aria2 zsh" "Install basic CLI tools" "yes"
 
 run_command "pacman -S --noconfirm yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick chafa ueberzugpp resvg" "Install CLI file manager (Yazi)" "yes"
+
+run_command "pacman -S --noconfirm nemo mousepad meld" "Install basic GUI tools" "yes"
+
+run_command "paru -S --sudoloop --noconfirm nemo-compare" "Install compare plugin for nemo" "yes" "no"
+
+run_command "paru -S --sudoloop --noconfirm microsoft-edge-stable-bin" "Install Microsoft edge browser" "yes" "no"
+
+run_command "paru -S --sudoloop --noconfirm visual-studio-code-bin" "Install visual studio code" "yes" "no"
 
 if run_command "git clone https://github.com/fantaro/dotfiles /home/$SUDO_USER/dotfiles" "Get dotfiles (https://github.com/fantaro/dotfiles)" "yes" "no"; then
     run_command "mv /home/$SUDO_USER/dotfiles/.config/kitty /home/$SUDO_USER/.config/" "Configuration for Kitty terminal" "no" "no"
