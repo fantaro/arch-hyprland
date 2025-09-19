@@ -10,7 +10,7 @@
 #                                                   /\___/ \ \_\
 #                                                   \/__/   \/_/
 
-# Last Change : 2025-08-15
+# Last Change : 2025-09-19
 #  Maintainer : 樊 振剛（ハン シンゴウ）
 #        Mail : fantaro@gmail.com
 #      Github : https://github.com/fantaro
@@ -66,7 +66,7 @@ run_command "git clone https://github.com/LazyVim/starter /home/$SUDO_USER/.conf
 
 run_command "pacman -S --noconfirm neovide" "Install GUI client for Neovim (Neovide)" "yes"
 
-run_command "pacman -S --noconfirm tar man-db gcc make bat lsd lazygit curl wget wl-clipboard xclip xsel fuse2 fastfetch ncdu btop tmux yt-dlp aria2 zsh" "Install basic CLI tools" "yes"
+run_command "pacman -S --noconfirm tar man-db gcc make bat lsd lazygit curl wget wl-clipboard xclip xsel fuse2 fastfetch ncdu btop zellij yt-dlp aria2 zsh" "Install basic CLI tools" "yes"
 
 run_command "pacman -S --noconfirm yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick chafa ueberzugpp resvg" "Install CLI file manager (Yazi)" "yes"
 
@@ -76,8 +76,7 @@ if run_command "git clone https://github.com/fantaro/dotfiles /home/$SUDO_USER/d
     run_command "mv /home/$SUDO_USER/dotfiles/.config/nvim/lua/config/keymaps.lua /home/$SUDO_USER/.config/nvim/lua/config/keymaps.lua" "Key maps configuration for neovim" "no" "no"
     run_command "mv /home/$SUDO_USER/dotfiles/.config/nvim/lua/config/options.lua /home/$SUDO_USER/.config/nvim/lua/config/options.lua" "Options configuration for neovim" "no" "no"
     run_command "mv /home/$SUDO_USER/dotfiles/.config/neovide /home/$SUDO_USER/.config/" "Configuration for Neovide" "no" "no"
-    run_command "mv /home/$SUDO_USER/dotfiles/.tmux.conf /home/$SUDO_USER/" "Configuration for tmux" "no" "no"
-    run_command "mv /home/$SUDO_USER/dotfiles/.config/tmux /home/$SUDO_USER/.config/" "Plugins for tmux" "no" "no"
+    run_command "mv /home/$SUDO_USER/dotfiles/.config/zellij /home/$SUDO_USER/.config/" "Configuration for Zellij" "no" "no"
     run_command "mv /home/$SUDO_USER/dotfiles/.aria2 /home/$SUDO_USER/" "Configuration for aria2" "no" "no"
     run_command "mv /home/$SUDO_USER/dotfiles/.config/btop /home/$SUDO_USER/.config/" "Configuration for btop" "no" "no"
     run_command "mv /home/$SUDO_USER/dotfiles/.config/lsd /home/$SUDO_USER/.config/" "Configuration for lsd" "no" "no"
