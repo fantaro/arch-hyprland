@@ -66,6 +66,8 @@ run_command "pacman -S --noconfirm nemo mousepad meld" "Install basic GUI tools"
 
 run_command "paru -S --sudoloop --noconfirm nemo-compare" "Install compare plugin for nemo" "yes" "no"
 
+run_command "paru -S --sudoloop --noconfirm localsend-bin" "Install cross-platform files share tool (LocalSend)" "yes" "no"
+
 run_command "paru -S --sudoloop --noconfirm microsoft-edge-stable-bin" "Install Microsoft edge browser" "yes" "no"
 
 run_command "paru -S --sudoloop --noconfirm visual-studio-code-bin" "Install visual studio code" "yes" "no"
